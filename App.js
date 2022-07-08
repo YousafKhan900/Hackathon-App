@@ -9,7 +9,7 @@ import TabOneScreen from "./app/screens/support/TabOneScreen";
 export default function App() {
   return (
     <PaperProvider>
-      <TabOneScreen />
+      <AppNavigator />
     </PaperProvider>
   );
 }

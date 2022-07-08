@@ -1,7 +1,11 @@
 import { Image, Text, View, Pressable, SafeAreaView } from "react-native";
 import tw from "twrnc";
 
-export default function TabOneScreen() {
+interface SupportScreenProps {
+  navigation: any;
+}
+
+export default function TabOneScreen(props: SupportScreenProps) {
   return (
     <SafeAreaView>
       <View style={tw`flex bg-slate-900`}>
@@ -44,7 +48,12 @@ export default function TabOneScreen() {
       <View style={tw`mt-2 p-2`}>
         <View style={tw`bg-gray-200 p-2`}>
           <Text style={tw`text-lg font-semibold`}>Contact Technician</Text>
-          <Pressable style={tw`bg-slate-900 my-2 p-3 text-center`}>
+          <Pressable
+            onPress={() => {
+              props.navigation.navigate("Technician");
+            }}
+            style={tw`bg-slate-900 my-2 p-3 text-center`}
+          >
             <Text style={tw`text-gray-50 text-base font-semibold`}>
               Contact Technician
             </Text>

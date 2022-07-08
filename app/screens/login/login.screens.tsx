@@ -8,7 +8,11 @@ import {
 } from "react-native-paper";
 import { Image, StyleSheet, SafeAreaView, ImageBackground } from "react-native";
 
-export const LoginScreen = () => {
+interface LoginScreenProps {
+  navigation: any;
+}
+
+export const LoginScreen = (props: LoginScreenProps) => {
   return (
     <ImageBackground
       style={styles.background}
@@ -34,7 +38,7 @@ export const LoginScreen = () => {
         <Button
           color="black"
           mode="elevated"
-          onPress={() => console.log("Pressed")}
+          onPress={() => props.navigation.navigate("Support")}
         >
           submit details
         </Button>
