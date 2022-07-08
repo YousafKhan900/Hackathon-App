@@ -59,16 +59,9 @@ var styles = StyleSheet.create({
     color: "white",
     textShadowColor: "black",
     textShadowRadius: 20,
-    fontWeight: "Bold",
     textAlign: "center",
     fontSize: 40,
     marginTop: 100,
     fontFamily: "Futura",
-  },
-  icon: {
-    buttonColor: "black",
-  },
-  cardcontent: {
-    flex: 1,
   },
 });
